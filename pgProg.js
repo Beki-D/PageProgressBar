@@ -24,27 +24,14 @@ document.getElementById("cards").onmousemove = e => {
     }
 }
 
-
-//Progress bar part
-
-//Unnecessary code
-// var body = document.body, html = document.documentElement;
-// var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-// let totalHeight = document.documentElement.scrollHeight;
-// let scrollHeight = document.documentElement.scrollTop;
-// console.log(height,"h .", totalHeight,"th .", scrollHeight,"st");
-// progressBar.style.setProperty("--scroll-total", `${totalHeight}`);
-
+//The progress bar code
 var progressBar = document.getElementById("progress-bar");
 
 window.onscroll = e => {
-    let scrollHeight = document.documentElement.scrollHeight;//.body
+    let scrollHeight = document.body.scrollHeight;
     let innerHeight = window.innerHeight;
     let scrollY = window.scrollY;
-    progressBar.style.setProperty("--scroll-y", `${scrollHeight}`);
 
     progressBar.style.setProperty("--width", `${scrollY / (scrollHeight - innerHeight) *100}%`);
-    
 }
 
