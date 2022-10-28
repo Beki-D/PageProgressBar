@@ -18,7 +18,7 @@ body {
 	left: 0;
 	width: var(--width);
 	height: 5px;
-	background-color: #626284;
+	background-image: linear-gradient(to right, #626284 , rgb(150, 150, 147));;
 	margin-bottom: 10px;
 	z-index: 5;
 }

@@ -26,19 +26,25 @@ document.getElementById("cards").onmousemove = e => {
 
 
 //Progress bar part
-var body = document.body, html = document.documentElement, progressBar = document.getElementById("progress-bar");
-var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-let totalHeight = document.documentElement.scrollHeight;
-let scrollHeight = document.documentElement.scrollTop;
-console.log(height,"h .", totalHeight,"th .", scrollHeight,"st");
+//Unnecessary code
+// var body = document.body, html = document.documentElement;
+// var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-progressBar.style.setProperty("--scroll-total", `${totalHeight}`);
+// let totalHeight = document.documentElement.scrollHeight;
+// let scrollHeight = document.documentElement.scrollTop;
+// console.log(height,"h .", totalHeight,"th .", scrollHeight,"st");
+// progressBar.style.setProperty("--scroll-total", `${totalHeight}`);
+
+var progressBar = document.getElementById("progress-bar");
 
 window.onscroll = e => {
-    let scrollHeight = document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight;//.body
+    let innerHeight = window.innerHeight;
+    let scrollY = window.scrollY;
     progressBar.style.setProperty("--scroll-y", `${scrollHeight}`);
 
-    progressBar.style.setProperty("--width", `${(scrollHeight/height)*100}%`);
-
+    progressBar.style.setProperty("--width", `${scrollY / (scrollHeight - innerHeight) *100}%`);
+    
 }
+
