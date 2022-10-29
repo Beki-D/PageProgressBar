@@ -19,5 +19,10 @@ window.onscroll = e => {
     let scrollY = window.scrollY;
 
     progressBar.style.setProperty("--width", `${scrollY / (scrollHeight - innerHeight) *100}%`);
-    conicProgressBar.style.setProperty("--width", `${scrollY / (scrollHeight - innerHeight) *100}%`);
+    conicProgressBar.style.setProperty("--width", `${Math.round(scrollY / (scrollHeight - innerHeight) *100)}%`);
+    
+    // Makes it Jump back to the top of page
+    conicProgressBar.addEventListener('click', () => {
+        document.documentElement.scrollTop = 0;
+    })
 }
