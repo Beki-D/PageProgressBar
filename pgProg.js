@@ -11,6 +11,7 @@ document.getElementById("cards").onmousemove = e => {
 
 //The progress bar code
 var progressBar = document.getElementById("progress-bar");
+var conicProgressBar = document.getElementById("conic-bar");
 
 window.onscroll = e => {
     let scrollHeight = document.body.scrollHeight;
@@ -18,4 +19,5 @@ window.onscroll = e => {
     let scrollY = window.scrollY;
 
     progressBar.style.setProperty("--width", `${scrollY / (scrollHeight - innerHeight) *100}%`);
+    conicProgressBar.style.setProperty("--width", `${scrollY / (scrollHeight - innerHeight) *100}%`);
 }
