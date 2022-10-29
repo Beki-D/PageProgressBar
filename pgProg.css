@@ -1,6 +1,8 @@
 :root {
 	--bg-color: #070606;
 	--card-color: rgb(31, 31, 31);
+	--green-color: #169319;
+	--white-color: #d7d7d7;
 }
 html {
 	scroll-behavior: smooth;
@@ -18,13 +20,14 @@ body {
 	background-color: var(--bg-color);
 }
 
+/* The top progress bar */
 #progress-bar {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: var(--width);
 	height: 5px;
-	background-image: linear-gradient(to right, #169319 var(--width), rgb(122, 71, 40));;
+	background-image: linear-gradient(to right, var(--green-color) var(--width), rgb(122, 71, 40));;
 	margin-bottom: 10px;
 	z-index: 5;
 }
@@ -32,14 +35,14 @@ body {
 /* The conic gradient progress chart */
 #conic-bar {
 	position: fixed;
-	bottom: 0;
-	right: 0;
-	height: 110px;
-	width: 110px;
-	background-image: conic-gradient(#03cc65 var(--width), #d7d7d7 0%);
+	bottom: 10px;
+	right: 10px;
+	height: 90px;
+	width: 90px;
+	background-image: conic-gradient(var(--green-color) var(--width), var(--white-color) 0%);
 	border-radius: 50%;
 	z-index: 5;
-	/* position: relative; */
+	cursor: pointer;
 }
 #icon {
 	display: flex;
@@ -49,10 +52,13 @@ body {
 	top: 5px;
 	text-align: center;
 	justify-content: center;
-	height: 100px;
-	width: 100px;
+	height: 80px;
+	width: 80px;
 	border-radius: 50%;
-	background-color: #585858;
+	background-color: var(--card-color);
+}
+#icon i{
+	color: var(--white-color);
 }
 
 #cards {
