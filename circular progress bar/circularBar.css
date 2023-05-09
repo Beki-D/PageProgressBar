@@ -6,10 +6,6 @@
 	--dark-cyan: #0d4546;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 body {
 	margin: 0px;
 	padding: 0px;
