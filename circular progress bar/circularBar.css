@@ -1,0 +1,74 @@
+:root {
+	--bg-color: #070606;
+	--card-color: rgb(31, 31, 31);
+	--green-color: #169319;
+	--white-color: #d7d7d7;
+	--dark-cyan: #0d4546;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-color);
+}
+
+.place-holder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	height: 300vh;
+	color: var(--white-color);
+	background-color: var(--card-color);
+}
+
+/* The conic gradient progress chart */
+#conic-bar {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	height: 90px;
+	width: 90px;
+	background-image: conic-gradient(var(--green-color) var(--width), var(--white-color) 0%);
+	border: 6px solid var(--dark-cyan);
+	border-radius: 50%;
+	cursor: pointer;
+	transform: rotate(135deg);
+	z-index: 5;
+}
+#icon {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	text-align: center;
+	justify-content: center;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: var(--dark-cyan);
+}
+#icon i {
+	color: var(--dark-cyan);
+}
+#sector {
+	position: absolute;
+	left: 45px;
+	bottom: 45px;
+	width: 45px;
+	height: 45px;
+	border-radius: 0 100% 0 0;
+	background-color: var(--dark-cyan);
+	border: solid var(--dark-cyan) 2px;
+}
